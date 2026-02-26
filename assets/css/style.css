@@ -1,0 +1,161 @@
+:root {
+    --bg: #0b0e14;
+    --glass: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --accent-cyan: #00f2ff;
+    --accent-yellow: #ffd700;
+    --ml-color: #fff159;
+    --shopee-color: #ee4d2d;
+    --text-main: #f0f0f0;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: var(--bg);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+.container { max-width: 1440px; margin: 0 auto; padding: 0 20px; }
+
+/* Layout Geral */
+.main-layout {
+    display: flex;
+    gap: 30px;
+    padding-top: 30px;
+    align-items: flex-start;
+}
+
+/* Sidebar Fixa */
+.sidebar {
+    width: 250px;
+    flex-shrink: 0;
+}
+
+.sidebar-inner {
+    position: sticky;
+    top: 100px;
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.sidebar h3 {
+    font-family: 'Syne', sans-serif;
+    color: var(--accent-cyan);
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.sidebar-nav { display: flex; flex-direction: column; gap: 10px; }
+
+.side-item {
+    background: transparent;
+    border: 1px solid var(--glass-border);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.side-item.active, .side-item:hover {
+    background: var(--accent-cyan);
+    color: var(--bg);
+    font-weight: 700;
+}
+
+/* Conteúdo Principal */
+.main-content { flex-grow: 1; }
+
+.glass-header {
+    background: rgba(11, 14, 20, 0.8);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--glass-border);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 15px 0;
+}
+
+.nav-wrapper { display: flex; justify-content: space-between; align-items: center; }
+.logo-text { font-family: 'Syne', sans-serif; font-size: 1.5rem; font-weight: 700; }
+.logo-text span { color: var(--accent-cyan); }
+.logo-img { height: 35px; margin-right: 10px; }
+
+.search-container { display: flex; gap: 10px; flex: 0.5; }
+.search-container input {
+    width: 100%;
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    padding: 10px 20px;
+    border-radius: 30px;
+    color: white;
+    outline: none;
+}
+
+.hero h1 {
+    font-family: 'Syne', sans-serif;
+    letter-spacing: -1px;
+    line-height: 1.1;
+}
+.hero h1 { font-family: 'Syne', sans-serif; font-size: 2.5rem; margin-bottom: 10px; 
+           background: linear-gradient(90deg, #fff, var(--accent-cyan));
+           -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+/* Grid de 4 Colunas */
+.product-grid { 
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 15px; 
+}
+
+.product-card {
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 12px;
+    transition: 0.4s;
+    position: relative;
+}
+
+.product-card:hover { transform: translateY(-5px); border-color: var(--accent-cyan); }
+
+.badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #28a745;
+    font-size: 0.65rem;
+    padding: 3px 7px;
+    border-radius: 5px;
+    font-weight: 600;
+    z-index: 2;
+}
+
+.img-container { width: 100%; aspect-ratio: 1/1; overflow: hidden; border-radius: 12px; margin-bottom: 10px; }
+.img-container img { width: 100%; height: 100%; object-fit: cover; }
+
+.price { font-size: 1.4rem; font-weight: 700; color: var(--accent-yellow); margin: 8px 0; }
+
+.action-buttons { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.btn { padding: 8px 2px; border-radius: 8px; text-decoration: none; text-align: center; font-weight: 600; font-size: 0.7rem; }
+.btn-ml { background: var(--ml-color); color: #333; }
+.btn-shopee { background: var(--shopee-color); color: white; }
+
+.wa-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; width: 55px; height: 55px; 
+            border-radius: 50%; display: flex; justify-content: center; align-items: center; z-index: 1001; }
+.wa-icon { width: 30px; fill: white; }
+
+/* Responsivo */
+@media (max-width: 1100px) {
+    .main-layout { flex-direction: column; }
+    .sidebar { width: 100%; }
+    .sidebar-inner { position: static; }
+    .sidebar-nav { flex-direction: row; overflow-x: auto; white-space: nowrap; padding-bottom: 10px; }
+    .product-grid { grid-template-columns: repeat(2, 1fr); }
+}

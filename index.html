@@ -7,10 +7,8 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -22,7 +20,7 @@
                 <span class="logo-text">Raem<span>Store</span></span>
             </div>
             <div class="search-container">
-                <input type="text" id="searchInput" placeholder="O que sua casa precisa hoje?">
+                <input type="text" id="searchInput" placeholder="Busque por nome ou SKU...">
                 <button class="btn-filter">Filtrar</button>
             </div>
         </div>
@@ -33,150 +31,185 @@
             <div class="sidebar-inner">
                 <h3>Categorias</h3>
                 <nav class="sidebar-nav">
-                    <button class="side-item active" data-filter="todos">Todos os Produtos</button>
-                    <button class="side-item" data-filter="cozinha">Cozinha</button>
-                    <button class="side-item" data-filter="mesa-posta">Mesa Posta</button>
-                    <button class="side-item" data-filter="organizacao">Organização</button>
-                    <button class="side-item" data-filter="utilidades">Utilidades</button>
+                    <button class="side-item active" data-filter="todos"><i class="fas fa-th-large"></i> Todos</button>
+                    <button class="side-item" data-filter="cozinha"><i class="fas fa-utensils"></i> Cozinha</button>
+                    <button class="side-item" data-filter="mesa-posta"><i class="fas fa-wine-glass"></i> Mesa Posta</button>
+                    <button class="side-item" data-filter="organizacao"><i class="fas fa-box"></i> Organização</button>
+                    <button class="side-item" data-filter="utilidades"><i class="fas fa-blender"></i> Utilidades</button>
                 </nav>
             </div>
         </aside>
 
         <main class="main-content">
-            <section class="hero">
-                <h1>Tecnologia e Estilo para seu Lar.</h1>
-                <p>Qualidade premium com a segurança das maiores plataformas.</p>
-                <div class="trust-badges">
-                    <span>✓ Mercado Livre</span>
-                    <span>✓ Shopee</span>
+            <section class="banner-carousel">
+                <div class="carousel-container">
+                    <div class="banner-slide active">
+                        <img src="assets/image/banner.png" alt="Banner 1">
+                        <div class="banner-text">
+                            <h2>Linha Gourmet 2026</h2>
+                            <p>Tecnologia e design para sua cozinha.</p>
+                        </div>
+                    </div>
+                    <div class="banner-slide">
+                        <img src="assets/image/bannerprod.png" alt="Banner 2">
+                        <div class="banner-text">
+                            <h2>Elegância na Mesa</h2>
+                            <p>Conjuntos exclusivos para momentos especiais.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
                 </div>
             </section>
 
             <div class="product-grid" id="productGrid">
                 <article class="product-card" data-category="cozinha">
-                    <div class="badge">Disponível</div>
+                    <div class="status-badge">DISPONÍVEL</div>
                     <div class="img-container">
                         <img src="assets/image/interogacao.png" alt="Conjunto Lily">
                     </div>
                     <div class="product-content">
-                        <h3>Conjunto 6 Copos Lily 280ml</h3>
-                        <span class="price">R$ 33,99</span>
+                        <h3>Conjunto 6 Copos Lily Vidro 280ml</h3>
+                        <p class="sku-text">SKU: V1082.01</p>
+                        <div class="price-container">
+                            <span class="price-value">R$ 33,99</span>
+                        </div>
                         <div class="action-buttons">
                             <a href="#" class="btn btn-ml">Mercado Livre</a>
                             <a href="#" class="btn btn-shopee">Shopee</a>
                         </div>
                     </div>
                 </article>
-
                 <article class="product-card" data-category="cozinha">
-                    <div class="badge">Disponível</div>
+                    <div class="status-badge">DISPONÍVEL</div>
                     <div class="img-container">
-                        <img src="assets/image/interogacao.png" alt="Balança">
+                        <img src="assets/image/interogacao.png" alt="Conjunto Lily">
                     </div>
                     <div class="product-content">
-                        <h3>Balança Digital Cozinha 10kg</h3>
-                        <span class="price">R$ 13,99</span>
+                        <h3>Conjunto 6 Copos Lily Vidro 280ml</h3>
+                        <p class="sku-text">SKU: V1082.01</p>
+                        <div class="price-container">
+                            <span class="price-value">R$ 33,99</span>
+                        </div>
                         <div class="action-buttons">
                             <a href="#" class="btn btn-ml">Mercado Livre</a>
                             <a href="#" class="btn btn-shopee">Shopee</a>
                         </div>
                     </div>
                 </article>
-                <article class="product-card" data-category="mesa-posta">
-                <div class="badge">Disponível</div>
-                <div class="img-container">
-                    <img src="assets/image/interogacao.png" alt="Coqueteleira">
-                </div>
-                <div class="product-content">
-                    <h3>Coqueteleira Boston 820ml</h3>
-                    <span class="price">R$ 33,99</span>
-                    <div class="action-buttons">
-                        <a href="#" class="btn btn-ml">Mercado Livre</a>
-                        <a href="#" class="btn btn-shopee">Shopee</a>
+                <article class="product-card" data-category="cozinha">
+                    <div class="status-badge">DISPONÍVEL</div>
+                    <div class="img-container">
+                        <img src="assets/image/interogacao.png" alt="Conjunto Lily">
                     </div>
-                </div>
-            </article>
-
-            <article class="product-card" data-category="organizacao">
-                <div class="badge">Disponível</div>
-                <div class="img-container">
-                    <img src="assets/image/interogacao.png" alt="Carrinho">
-                </div>
-                <div class="product-content">
-                    <h3>Carrinho de Feira Dobrável</h3>
-                    <span class="price">R$ 43,99</span>
-                    <div class="action-buttons">
-                        <a href="#" class="btn btn-ml">Mercado Livre</a>
-                        <a href="#" class="btn btn-shopee">Shopee</a>
+                    <div class="product-content">
+                        <h3>Conjunto 6 Copos Lily Vidro 280ml</h3>
+                        <p class="sku-text">SKU: V1082.01</p>
+                        <div class="price-container">
+                            <span class="price-value">R$ 33,99</span>
+                        </div>
+                        <div class="action-buttons">
+                            <a href="#" class="btn btn-ml">Mercado Livre</a>
+                            <a href="#" class="btn btn-shopee">Shopee</a>
+                        </div>
                     </div>
-                </div>
-            </article>
-            <article class="product-card" data-category="mesa-posta">
-                <div class="badge">Disponível</div>
-                <div class="img-container">
-                    <img src="assets/image/interogacao.png" alt="Coqueteleira">
-                </div>
-                <div class="product-content">
-                    <h3>Coqueteleira Boston 820ml</h3>
-                    <span class="price">R$ 33,99</span>
-                    <div class="action-buttons">
-                        <a href="#" class="btn btn-ml">Mercado Livre</a>
-                        <a href="#" class="btn btn-shopee">Shopee</a>
+                </article>
+                <article class="product-card" data-category="cozinha">
+                    <div class="status-badge">DISPONÍVEL</div>
+                    <div class="img-container">
+                        <img src="assets/image/interogacao.png" alt="Conjunto Lily">
                     </div>
-                </div>
-            </article>
-
-            <article class="product-card" data-category="organizacao">
-                <div class="badge">Disponível</div>
-                <div class="img-container">
-                    <img src="assets/image/interogacao.png" alt="Carrinho">
-                </div>
-                <div class="product-content">
-                    <h3>Carrinho de Feira Dobrável</h3>
-                    <span class="price">R$ 43,99</span>
-                    <div class="action-buttons">
-                        <a href="#" class="btn btn-ml">Mercado Livre</a>
-                        <a href="#" class="btn btn-shopee">Shopee</a>
+                    <div class="product-content">
+                        <h3>Conjunto 6 Copos Lily Vidro 280ml</h3>
+                        <p class="sku-text">SKU: V1082.01</p>
+                        <div class="price-container">
+                            <span class="price-value">R$ 33,99</span>
+                        </div>
+                        <div class="action-buttons">
+                            <a href="#" class="btn btn-ml">Mercado Livre</a>
+                            <a href="#" class="btn btn-shopee">Shopee</a>
+                        </div>
                     </div>
-                </div>
-            </article>
-            <article class="product-card" data-category="mesa-posta">
-                <div class="badge">Disponível</div>
-                <div class="img-container">
-                    <img src="assets/image/interogacao.png" alt="Coqueteleira">
-                </div>
-                <div class="product-content">
-                    <h3>Coqueteleira Boston 820ml</h3>
-                    <span class="price">R$ 33,99</span>
-                    <div class="action-buttons">
-                        <a href="#" class="btn btn-ml">Mercado Livre</a>
-                        <a href="#" class="btn btn-shopee">Shopee</a>
+                </article>
+                <article class="product-card" data-category="cozinha">
+                    <div class="status-badge">DISPONÍVEL</div>
+                    <div class="img-container">
+                        <img src="assets/image/interogacao.png" alt="Conjunto Lily">
                     </div>
-                </div>
-            </article>
-
-            <article class="product-card" data-category="organizacao">
-                <div class="badge">Disponível</div>
-                <div class="img-container">
-                    <img src="assets/image/interogacao.png" alt="Carrinho">
-                </div>
-                <div class="product-content">
-                    <h3>Carrinho de Feira Dobrável</h3>
-                    <span class="price">R$ 43,99</span>
-                    <div class="action-buttons">
-                        <a href="#" class="btn btn-ml">Mercado Livre</a>
-                        <a href="#" class="btn btn-shopee">Shopee</a>
+                    <div class="product-content">
+                        <h3>Conjunto 6 Copos Lily Vidro 280ml</h3>
+                        <p class="sku-text">SKU: V1082.01</p>
+                        <div class="price-container">
+                            <span class="price-value">R$ 33,99</span>
+                        </div>
+                        <div class="action-buttons">
+                            <a href="#" class="btn btn-ml">Mercado Livre</a>
+                            <a href="#" class="btn btn-shopee">Shopee</a>
+                        </div>
                     </div>
+                </article>
+                <article class="product-card" data-category="cozinha">
+                    <div class="status-badge">DISPONÍVEL</div>
+                    <div class="img-container">
+                        <img src="assets/image/interogacao.png" alt="Conjunto Lily">
+                    </div>
+                    <div class="product-content">
+                        <h3>Conjunto 6 Copos Lily Vidro 280ml</h3>
+                        <p class="sku-text">SKU: V1082.01</p>
+                        <div class="price-container">
+                            <span class="price-value">R$ 33,99</span>
+                        </div>
+                        <div class="action-buttons">
+                            <a href="#" class="btn btn-ml">Mercado Livre</a>
+                            <a href="#" class="btn btn-shopee">Shopee</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="product-card" data-category="cozinha">
+                    <div class="status-badge">DISPONÍVEL</div>
+                    <div class="img-container">
+                        <img src="assets/image/interogacao.png" alt="Conjunto Lily">
+                    </div>
+                    <div class="product-content">
+                        <h3>Conjunto 6 Copos Lily Vidro 280ml</h3>
+                        <p class="sku-text">SKU: V1082.01</p>
+                        <div class="price-container">
+                            <span class="price-value">R$ 33,99</span>
+                        </div>
+                        <div class="action-buttons">
+                            <a href="#" class="btn btn-ml">Mercado Livre</a>
+                            <a href="#" class="btn btn-shopee">Shopee</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="product-card" data-category="cozinha">
+                    <div class="status-badge">DISPONÍVEL</div>
+                    <div class="img-container">
+                        <img src="assets/image/interogacao.png" alt="Conjunto Lily">
+                    </div>
+                    <div class="product-content">
+                        <h3>Conjunto 6 Copos Lily Vidro 280ml</h3>
+                        <p class="sku-text">SKU: V1082.01</p>
+                        <div class="price-container">
+                            <span class="price-value">R$ 33,99</span>
+                        </div>
+                        <div class="action-buttons">
+                            <a href="#" class="btn btn-ml">Mercado Livre</a>
+                            <a href="#" class="btn btn-shopee">Shopee</a>
+                        </div>
+                    </div>
+                </article>
                 </div>
-            </article>
-            </div>
+                
         </main>
     </div>
 
     <a href="https://wa.me/SEUNUMERO" class="wa-float" target="_blank">
-        <svg viewBox="0 0 32 32" class="wa-icon"><path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825.737 5.475 2.025 7.775l-2.025 7.425 7.6-1.987c2.35 1.412 5.087 2.225 8.013 2.225 8.837 0 16-7.163 16-16s-7.163-16-16-16zm8.213 22.513c-.338.95-1.688 1.838-2.738 2.087-.75.175-1.738.313-4.838-.975-3.95-1.638-6.5-5.663-6.7-5.925-.187-.263-1.613-2.15-1.613-4.1s1.013-2.913 1.375-3.313c.363-.388.788-.488 1.05-.488s.525.013.75.025c.238.013.55-.088.863.663s1.063 2.588 1.15 2.775.15.4.013.675c-.138.263-.3.438-.513.688s-.463.513-.663.738c-.213.225-.438.475-.187.913s1.113 1.838 2.388 2.975c1.638 1.463 3.025 1.913 3.45 2.138s.713.163.975-.138c.263-.3.1.1.2.2.2.2 0 0 0 0z"/></svg>
+        <i class="fab fa-whatsapp wa-icon"></i>
     </a>
 
-    <script src="js/script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
